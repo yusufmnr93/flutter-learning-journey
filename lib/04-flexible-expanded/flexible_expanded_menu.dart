@@ -78,7 +78,7 @@ class FlexibleExpandedMenu extends StatelessWidget {
           width: 48,
           height: 48,
           decoration: BoxDecoration(
-            color: Colors.indigo.withOpacity(0.1),
+            color: Colors.indigo.withValues(alpha: 0.1),
             borderRadius: BorderRadius.circular(12),
           ),
           child: Icon(icon, color: Colors.indigo),
