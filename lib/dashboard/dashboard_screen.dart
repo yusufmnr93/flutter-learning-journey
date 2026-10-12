@@ -8,6 +8,7 @@ import '../06-scrollable-views/scrollable_views_menu.dart';
 import '../07-navigation/named_route_demo.dart';
 import '../07-navigation/navigation_task.dart';
 import '../07-navigation/navigation_menu.dart';
+import '../08-navigation-arguments/navigation_arguments_menu.dart';
 
 class DashboardScreen extends StatelessWidget {
   const DashboardScreen({super.key});
@@ -90,6 +91,18 @@ class DashboardScreen extends StatelessWidget {
             icon: Icons.navigation_rounded,
             color: Colors.deepPurple,
             targetScreen: const NavigationMenu(),
+          ),
+
+          const SizedBox(height: 12),
+
+          _buildTopicCard(
+            context: context,
+            topicNumber: '08',
+            title: 'Navigation Arguments',
+            subtitle: 'Named Route, arguments, dan data dari API',
+            icon: Icons.screen_share_rounded,
+            color: Colors.teal,
+            targetScreen: const NavigationArgumentsMenu(),
           ),
         ],
       ),
