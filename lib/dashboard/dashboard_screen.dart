@@ -9,6 +9,7 @@ import '../07-navigation/named_route_demo.dart';
 import '../07-navigation/navigation_task.dart';
 import '../07-navigation/navigation_menu.dart';
 import '../08-navigation-arguments/navigation_arguments_menu.dart';
+import '../09-stateful-widget/stateful_widget_menu.dart';
 
 class DashboardScreen extends StatelessWidget {
   const DashboardScreen({super.key});
@@ -103,6 +104,18 @@ class DashboardScreen extends StatelessWidget {
             icon: Icons.screen_share_rounded,
             color: Colors.teal,
             targetScreen: const NavigationArgumentsMenu(),
+          ),
+
+          const SizedBox(height: 12),
+
+          _buildTopicCard(
+            context: context,
+            topicNumber: '09',
+            title: 'StatefulWidget',
+            subtitle: 'setState, Counter, Like Button, dan Tasbih Digital',
+            icon: Icons.touch_app_rounded,
+            color: Colors.teal,
+            targetScreen: const StatefulWidgetMenu(),
           ),
         ],
       ),
