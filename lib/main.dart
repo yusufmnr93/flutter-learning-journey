@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 
 import 'dashboard/dashboard_screen.dart';
+import '10-game-store/view/detail.dart';
 
 void main() {
   runApp(const MyApp());
@@ -19,6 +20,13 @@ class MyApp extends StatelessWidget {
         useMaterial3: true,
       ),
       home: const DashboardScreen(),
+      routes: {
+        '/detail': (context) {
+          final gameId = ModalRoute.of(context)!.settings.arguments as int;
+
+          return Detail(gameTerpilih: gameId);
+        },
+      },
     );
   }
 }

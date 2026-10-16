@@ -5,11 +5,10 @@ import '../03-layout-alignment/alignment_menu.dart';
 import '../04-flexible-expanded/flexible_expanded_menu.dart';
 import '../05-sizedbox-spacer-card/sizedbox_spacer_card_menu.dart';
 import '../06-scrollable-views/scrollable_views_menu.dart';
-import '../07-navigation/named_route_demo.dart';
-import '../07-navigation/navigation_task.dart';
 import '../07-navigation/navigation_menu.dart';
 import '../08-navigation-arguments/navigation_arguments_menu.dart';
 import '../09-stateful-widget/stateful_widget_menu.dart';
+import '../10-game-store/game_store_menu.dart';
 
 class DashboardScreen extends StatelessWidget {
   const DashboardScreen({super.key});
@@ -116,6 +115,18 @@ class DashboardScreen extends StatelessWidget {
             icon: Icons.touch_app_rounded,
             color: Colors.teal,
             targetScreen: const StatefulWidgetMenu(),
+          ),
+
+          const SizedBox(height: 12),
+
+          _buildTopicCard(
+            context: context,
+            topicNumber: '10',
+            title: 'Game Store',
+            subtitle: 'REST API, JSON Serialization, dan Navigasi Detail',
+            icon: Icons.sports_esports_rounded,
+            color: Colors.deepPurple,
+            targetScreen: const GameStoreMenu(),
           ),
         ],
       ),
