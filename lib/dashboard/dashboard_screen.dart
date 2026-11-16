@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_learning_journey/11-getx-state/getx_state_menu.dart';
 
 import '../02-layout-row-column/row_column_menu.dart';
 import '../03-layout-alignment/alignment_menu.dart';
@@ -127,6 +128,17 @@ class DashboardScreen extends StatelessWidget {
             icon: Icons.sports_esports_rounded,
             color: Colors.deepPurple,
             targetScreen: const GameStoreMenu(),
+          ),
+
+          const SizedBox(height: 12),
+          _buildTopicCard(
+            context: context,
+            topicNumber: '11',
+            title: 'State Management GetX',
+            subtitle: 'Controller, variabel reaktif (.obs), dan Obx',
+            icon: Icons.bolt_rounded,
+            color: Colors.green,
+            targetScreen: const GetxStateMenu(),
           ),
         ],
       ),
