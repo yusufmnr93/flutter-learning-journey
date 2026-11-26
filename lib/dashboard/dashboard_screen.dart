@@ -10,6 +10,8 @@ import '../07-navigation/navigation_menu.dart';
 import '../08-navigation-arguments/navigation_arguments_menu.dart';
 import '../09-stateful-widget/stateful_widget_menu.dart';
 import '../10-game-store/game_store_menu.dart';
+import '../12-gps-location/gps_location_menu.dart';
+import '../13-crud-api/crud_api_menu.dart';
 
 class DashboardScreen extends StatelessWidget {
   const DashboardScreen({super.key});
@@ -139,6 +141,27 @@ class DashboardScreen extends StatelessWidget {
             icon: Icons.bolt_rounded,
             color: Colors.green,
             targetScreen: const GetxStateMenu(),
+          ),
+          const SizedBox(height: 12),
+          _buildTopicCard(
+            context: context,
+            topicNumber: '12',
+            title: 'Akses Lokasi GPS',
+            subtitle: 'Geolocator, izin lokasi, dan reverse geocoding',
+            icon: Icons.location_on_rounded,
+            color: Colors.indigo,
+            targetScreen: const GpsLocationMenu(),
+          ),
+
+          const SizedBox(height: 12),
+          _buildTopicCard(
+            context: context,
+            topicNumber: '13',
+            title: 'CRUD dengan REST API',
+            subtitle: 'POST, PUT, DELETE, dialog, dan SnackBar',
+            icon: Icons.sync_alt_rounded,
+            color: Colors.orange,
+            targetScreen: const CrudApiMenu(),
           ),
         ],
       ),
